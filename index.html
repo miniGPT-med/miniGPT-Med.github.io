@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MiniGPT-Med">
+  <meta name="keywords" content="GPT-4, open-source, vision-language">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MiniGPT-Med</title>
+
+  <meta name="google-site-verification" content="6lbYN1vX7A4sD8SrVniq84UEKyEUSBgxeP7d3FjuuK0" />
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <!-- <link rel="icon" href="./static/images/icon.png"> -->
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <link rel="shortcut icon" href="path/to/favicon.ico" type="image/x-icon">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  </head>
+
+  <style>
+
+    #main{
+        position: relative;;
+        width: 1200px;
+    }
+
+    .box{
+        float: left;
+        padding: 15px 0 0 15px;
+/*        background-color: red;*/
+    }
+
+    .pic{
+        width: 500px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    .pic img{
+        width: 500px;
+    }
+
+    .author-name {
+    font-size: 1.3em; /* Slightly larger than default */
+    color: #7a7a7a; /* Grey color */
+    margin-top: 0.5em; /* Space above the author name */
+  }
+
+  .affiliation {
+    font-size: 1.2em; /* Slightly larger than default */
+    color: #090808; /* black color */
+    margin-top: 0.5em; /* Space above the author name */
+  }
+
+
+  </style>
+
+
+  <body>
+
+<script>
+  window.addEventListener('load', function() {
+    const urls = [
+      'https://876a8d3e814b8c3a8b.gradio.live',
+      'https://a51cb1bdf92ad731d6.gradio.live',
+    ];
+    const randomIndex = Math.floor(Math.random() * urls.length);
+    const randomURL = urls[randomIndex];
+    document.getElementById('randomLink').href = randomURL;
+  });
+</script>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MiniGPT-Med:</h1>
+          <h2 class="title is-2 publication-title">Large Language Model as a General Interface for Radiology Diagnosis</h2>
+          <!-- <p class="author-name">Asma Alkhaldi, Raneem Alnajim, Layan Alabdullatef, Rawan Alyahya, Jun Chen, Deyao Zhu,</p> -->
+          
+          <p class="author-name">
+            <a href="https://www.linkedin.com/in/asma-alkhaldi-237713170?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Asma Alkhaldi</a>,
+            <a href="https://www.linkedin.com/in/raneem-alnajim?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Raneem Alnajim</a>,
+            <a href="https://www.linkedin.com/in/layan-alabdullatef?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Layan Alabdullatef</a>,
+            <a href="https://www.linkedin.com/in/rawan-alyahya-139aaa1b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Rawan Alyahya</a>,
+            <a href="https://www.linkedin.com/in/jun-chen-54a090198?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Jun Chen</a>,
+            <a href="https://www.linkedin.com/in/deyao-zhu-205774154?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Deyao Zhu</a>
+          </p>
+
+          <p class="author-name">
+            <a href="https://www.linkedin.com/in/alsinana?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Ahmed Alsinan</a>,
+            <a href="https://www.linkedin.com/in/mohamed-elhoseiny-8a836215?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Mohamed Elhoseiny</a>
+          </p>
+          <p><br></p>
+
+          <p class="affiliation">Saudi Data and Artificial Intelligence Authority (SDAIA)</p>
+          <p class="affiliation">King Abdullah University of Science and Technology (KAUST)</p>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2310.09478" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              
+              <span class="link-block">
+                <a href="https://github.com/Vision-CAIR/MiniGPT-Med" target="_blank" 
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              
+              <span class="link-block">
+                      <a href="https://huggingface.co/spaces/Vision-CAIR/MiniGPT-Med" target="_blank"
+                         class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        🤗
+                      </span>
+                      <span>Space</span>
+                    </a>
+                  </span>
+              
+              
+              <span class="link-block">
+                <a id="randomLink" href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-play"></i>
+                  </span>
+                  <span>Demo</span>
+                </a>
+              </span>
+              
+              <span class="link-block">
+                <a href="" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                  </a>
+              </span>
+              
+              <!-- <span class="link-block">
+                <a href="" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+              </span> -->
+              
+              <!-- <span class="link-block">
+                <a href="" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-laugh"></i>
+                  </span>
+                  <span>Model</span>
+                  </a>
+              </span> -->
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+<link rel="stylesheet" type="text/css" href="js/simple_style.css" />
+<script type="text/javascript" src="js/simple_swiper.js"></script>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent advancements in artificial intelligence (AI) have precipitated significant breakthroughs in healthcare, particularly in refining diagnostic procedures. However, previous studies have often been constrained to limited functionalities. This study introduces MiniGPT-Med, a vision-language model derived from large-scale language models and tailored for medical applications. MiniGPT-Med demonstrates remarkable versatility across various imaging modalities, including X-rays, CT scans, and MRIs, enhancing its utility. The model is capable of performing tasks such as medical report generation, visual question answering (VQA), and disease identification within medical imagery. Its integrated processing of both image and textual clinical data markedly improves diagnostic accuracy. Our empirical assessments confirm MiniGPT-Med's superior performance in disease grounding, medical report generation, and VQA benchmarks, representing a significant step towards reducing the gap in assisting radiology practice. Furthermore, it achieves state-of-the-art performance on medical report generation, higher than the previous best model by 19\% accuracy. MiniGPT-Med promises to become a general interface for radiology diagnoses, enhancing diagnostic efficiency across a wide range of medical imaging applications. </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    <br>
+    <br>
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe width=“560” height=“315" src=“https://www.youtube.com/embed/__tftoxpBAw” title=“YouTube video player” frameborder=“0” allow=“accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share” allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+
+  
+    <br>
+    <br>
+    <!-- Paper Model. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-six-fifths">
+        <h2 class="title is-3">Model</h2>
+        <div class="content has-text-justified">
+          <p>
+            <b>MiniGPT-Med architecture comprises a vision encoder, a linear projection layer, and a large language model. It processes a single medical image, transforming it into visual semantic features via a pretrained vision en- coder. These features are concatenated into a single visual token. A linear projection layer then maps these visual tokens into the large language model’s space. Through- out the training process, we maintain the vision encoder’s parameters constant while fine-tuning the large language model and linear projection layer. </b>:
+          </p>
+          <ul>
+
+          </ul>
+        </div>  
+        <img id="model" width="80%" src="images/overview_model.png">
+        <h3 class="subtitle has-text-centered">
+          <p style="font-family:Times New Roman"><b>The architecture of MiniGPT-Med.</b></p>
+        </h3>   
+        <br>
+        <br>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3">Qualitative Results</h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div style="display: flex; justify-content: center; align-items: center;" class="columns is-centered">
+    <img id="results" style="max-width: 150%; max-height: 150vh;" src="demos/demo.png">
+</div>
+</section>
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+</code></pre>
+  </div>
+</section> -->
+
+
+<section class="section" id="Acknowledgement">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgement</h2>
+    <p>This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a href = "https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License.</a></p>
+  
+  </div>
+</section>
+
+
+</body>
+
+</html>
