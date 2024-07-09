@@ -69,6 +69,20 @@
     margin-top: 0.5em; /* Space above the author name */
   }
 
+  .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 10vh; /* Adjusted height to reduce empty space at the top */
+            width: 100%;
+            padding-top: 8vh; /* Adds a little space at the top */
+        }
+
+        video {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
 
   </style>
 
@@ -201,13 +215,14 @@
 
 
 <!-- Video -->
-<video width="640" height="360" controls autoplay loop muted poster="path/to/poster.jpg">
-  <source src="path/to/your/video.mp4" type="video/mp4">
-  <source src="path/to/your/video.webm" type="video/webm">
-  <source src="path/to/your/video.ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
-
+<div class="video-container">
+  <video width="640" height="200" controls>
+    <source src="/Users/asma_alkhaldi/Downloads/miniGPT-Med.mov" type="video/mp4">
+      <!-- <source src="path/to/your/video.webm" type="video/webm">
+      <source src="path/to/your/video.ogg" type="video/ogg"> -->
+      Your browser does not support the video tag.
+  </video>
+</div>
 
 
 <section class="section">
